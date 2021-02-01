@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate Area of the Rectangle"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="LENGTH (cm):"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/editTextLENGTH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="HEIGHT (cm):"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/editTextHEIGHT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/calculateArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CALCULATE AREA"
+            android:onClick="calculateArea"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="AREA (cm²):"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textViewRESULT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textSize="24sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/clearResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLEAR RESULTS"
+            android:textSize="30sp" />
+
+
+
+    </LinearLayout>
+</LinearLayout>
