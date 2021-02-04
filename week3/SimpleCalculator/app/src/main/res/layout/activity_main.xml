@@ -8,14 +8,11 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
+        style="@style/LinearLayout"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewHEADER"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Calculate Area of the Rectangle"
@@ -25,9 +22,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        style="@style/LinearLayout"
         android:orientation="vertical">
 
         <LinearLayout
@@ -38,21 +33,15 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
+                android:id="@+id/textViewLENGTH_LABEL"
                 android:text="LENGTH (cm):"
-                android:textSize="24sp" />
+                style="@style/textViewLABEL"
+                 />
 
             <EditText
                 android:id="@+id/editTextLENGTH"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="5"
-                android:gravity="center"
-                android:inputType="numberDecimal"
-                android:textSize="24sp" />
+                style="@style/editTextINPUT"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -63,54 +52,39 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
+                android:id="@+id/textViewHEIGHT_LABEL"
                 android:text="HEIGHT (cm):"
-                android:textSize="24sp" />
+                style="@style/textViewLABEL"
+                 />
 
             <EditText
                 android:id="@+id/editTextHEIGHT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:ems="5"
-                android:inputType="numberDecimal"
-                android:textSize="24sp" />
+                style="@style/editTextINPUT"
+                />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
+        style="@style/LinearLayout"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/calculateArea"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/button"
             android:text="CALCULATE AREA"
             android:onClick="calculateArea"
-            android:textSize="30sp" />
+             />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
+        style="@style/LinearLayout"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
+            android:id="@+id/textViewAREA_LABEL"
             android:text="AREA(cm²):"
-            android:textSize="24sp" />
+            style="@style/textViewLABEL"
+             />
 
         <TextView
             android:id="@+id/textViewRESULT"
@@ -125,20 +99,13 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
+        style="@style/LinearLayout"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/clearResults"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/button"
             android:text="CLEAR RESULTS"
-            android:textSize="30sp" />
-
-
-
+             />
     </LinearLayout>
 </LinearLayout>
