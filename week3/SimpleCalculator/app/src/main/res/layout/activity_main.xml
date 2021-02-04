@@ -49,7 +49,7 @@
                 android:id="@+id/editTextLENGTH"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="5"
                 android:gravity="center"
                 android:inputType="numberDecimal"
                 android:textSize="24sp" />
@@ -75,7 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:ems="10"
+                android:ems="5"
                 android:inputType="numberDecimal"
                 android:textSize="24sp" />
         </LinearLayout>
@@ -106,20 +106,19 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="AREA (cm²):"
+            android:gravity="left"
+            android:text="AREA(cm²):"
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/textViewRESULT"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="center"
             android:text=""
+            android:ems="5"
             android:textSize="24sp" />
 
 
