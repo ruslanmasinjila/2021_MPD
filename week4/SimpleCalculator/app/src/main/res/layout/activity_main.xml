@@ -1,33 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:orientation="vertical" >
-
+    android:paddingRight="16dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
+        style="@style/LinearLayout"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewHEADER"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Calculate Area of the Rectangle"
             android:gravity="center"
+            android:text="Calculate Area of the Rectangle"
             android:textSize="24sp"
             android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        style="@style/LinearLayout"
         android:orientation="vertical">
 
         <LinearLayout
@@ -38,21 +31,13 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:text="LENGTH (cm):"
-                android:textSize="24sp" />
+                android:id="@+id/textViewLENGTH_LABEL"
+                style="@style/textViewLABEL"
+                android:text="LENGTH (cm):" />
 
             <EditText
                 android:id="@+id/editTextLENGTH"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="5"
-                android:gravity="center"
-                android:inputType="numberDecimal"
-                android:textSize="24sp" />
+                style="@style/editTextINPUT" />
         </LinearLayout>
 
         <LinearLayout
@@ -63,82 +48,55 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:text="HEIGHT (cm):"
-                android:textSize="24sp" />
+                android:id="@+id/textViewHEIGHT_LABEL"
+                style="@style/textViewLABEL"
+                android:text="HEIGHT (cm):" />
 
             <EditText
                 android:id="@+id/editTextHEIGHT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:ems="5"
-                android:inputType="numberDecimal"
-                android:textSize="24sp" />
+                style="@style/editTextINPUT" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
+        style="@style/LinearLayout"
         android:orientation="vertical">
 
-        <Button
+        <android.widget.Button
             android:id="@+id/calculateArea"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CALCULATE AREA"
+            style="@style/button"
+            android:background="@drawable/rounded_button_green"
             android:onClick="calculateArea"
-            android:textSize="30sp" />
+            android:text="CALCULATE AREA" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
+        style="@style/LinearLayout"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="AREA(cm²):"
-            android:textSize="24sp" />
+            android:id="@+id/textViewAREA_LABEL"
+            style="@style/textViewLABEL"
+            android:text="AREA(cm²):" />
 
         <TextView
             android:id="@+id/textViewRESULT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:ems="5"
             android:gravity="center"
             android:text=""
-            android:ems="5"
             android:textSize="24sp" />
-
-
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
+        style="@style/LinearLayout"
         android:orientation="vertical">
 
-        <Button
+        <android.widget.Button
             android:id="@+id/clearResults"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CLEAR RESULTS"
-            android:textSize="30sp" />
-
-
-
+            style="@style/button"
+            android:background="@drawable/rounded_button_red"
+            android:text="CLEAR RESULTS" />
     </LinearLayout>
 </LinearLayout>
