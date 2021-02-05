@@ -132,6 +132,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CLEAR RESULTS"
+            android:onClick="clearResults"
             android:textSize="30sp" />
     </LinearLayout>
 </LinearLayout>

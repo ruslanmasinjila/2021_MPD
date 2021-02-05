@@ -24,7 +24,7 @@
         android:orientation="vertical">
 
         <LinearLayout
-            style= "@style/LinearHorizontalLayout"
+            style="@style/LinearHorizontalLayout"
             android:orientation="horizontal">
 
             <TextView
@@ -38,7 +38,7 @@
         </LinearLayout>
 
         <LinearLayout
-            style= "@style/LinearHorizontalLayout"
+            style="@style/LinearHorizontalLayout"
             android:orientation="horizontal">
 
             <TextView
@@ -75,8 +75,8 @@
 
         <TextView
             android:id="@+id/textViewRESULT"
+            style="@style/WRAP_CONTENT_ALL"
             android:background="@drawable/border"
-            style = "@style/WRAP_CONTENT_ALL"
             android:ems="5"
             android:gravity="center"
             android:text=""
