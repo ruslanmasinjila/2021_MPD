@@ -6,7 +6,7 @@
     android:paddingRight="16dp">
 
     <LinearLayout
-        style="@style/LinearLayout"
+        style="@style/LinearHorizontalLayout"
         android:orientation="vertical">
 
         <TextView
@@ -20,14 +20,11 @@
     </LinearLayout>
 
     <LinearLayout
-        style="@style/LinearLayout"
+        style="@style/LinearHorizontalLayout"
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
+            style= "@style/LinearHorizontalLayout"
             android:orientation="horizontal">
 
             <TextView
@@ -41,10 +38,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
+            style= "@style/LinearHorizontalLayout"
             android:orientation="horizontal">
 
             <TextView
@@ -59,7 +53,7 @@
     </LinearLayout>
 
     <LinearLayout
-        style="@style/LinearLayout"
+        style="@style/LinearHorizontalLayout"
         android:orientation="vertical">
 
         <android.widget.Button
@@ -71,7 +65,7 @@
     </LinearLayout>
 
     <LinearLayout
-        style="@style/LinearLayout"
+        style="@style/LinearHorizontalLayout"
         android:orientation="horizontal">
 
         <TextView
@@ -82,8 +76,7 @@
         <TextView
             android:id="@+id/textViewRESULT"
             android:background="@drawable/border"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style = "@style/WRAP_CONTENT_ALL"
             android:ems="5"
             android:gravity="center"
             android:text=""
@@ -91,7 +84,7 @@
     </LinearLayout>
 
     <LinearLayout
-        style="@style/LinearLayout"
+        style="@style/LinearHorizontalLayout"
         android:orientation="vertical">
 
         <android.widget.Button
