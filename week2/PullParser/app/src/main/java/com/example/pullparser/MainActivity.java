@@ -54,81 +54,57 @@ public class MainActivity extends AppCompatActivity {
         ListView_LIST.setAdapter(arrayAdapter);
 
 
-
-
     }
 
-    private LinkedList<WidgetClass> parseData(String dataToParse)
-    {
+    private LinkedList<WidgetClass> parseData(String dataToParse) {
         WidgetClass widget = null;
-        LinkedList <WidgetClass> alist = null;
-        try
-        {
+        LinkedList<WidgetClass> alist = null;
+        try {
             XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
             factory.setNamespaceAware(true);
             XmlPullParser xpp = factory.newPullParser();
-            xpp.setInput( new StringReader( dataToParse ) );
+            xpp.setInput(new StringReader(dataToParse));
             int eventType = xpp.getEventType();
-            while (eventType != XmlPullParser.END_DOCUMENT)
-            {
+            while (eventType != XmlPullParser.END_DOCUMENT) {
                 // Found a start tag
-                if(eventType == XmlPullParser.START_TAG)
-                {
+                if (eventType == XmlPullParser.START_TAG) {
                     // Check which Tag we have
-                    if (xpp.getName().equalsIgnoreCase("widgetcollection"))
-                    {
-                        alist  = new LinkedList<WidgetClass>();
-                    }
-                    else
-                    if (xpp.getName().equalsIgnoreCase("widget"))
-                    {
-                        Log.e("MyTag","Item Start Tag found");
+                    if (xpp.getName().equalsIgnoreCase("widgetcollection")) {
+                        alist = new LinkedList<WidgetClass>();
+                    } else if (xpp.getName().equalsIgnoreCase("widget")) {
+                        Log.e("MyTag", "Item Start Tag found");
                         widget = new WidgetClass();
-                    }
-                    else
-                    if (xpp.getName().equalsIgnoreCase("bolt"))
-                    {
+                    } else if (xpp.getName().equalsIgnoreCase("bolt")) {
                         // Now just get the associated text
                         String temp = xpp.nextText();
                         // Do something with text
-                        Log.e("MyTag","Bolt is " + temp);
+                        Log.e("MyTag", "Bolt is " + temp);
                         widget.setBolt(temp);
-                    }
-                    else
+                    } else
                         // Check which Tag we have
-                        if (xpp.getName().equalsIgnoreCase("Nut"))
-                        {
+                        if (xpp.getName().equalsIgnoreCase("Nut")) {
                             // Now just get the associated text
                             String temp = xpp.nextText();
                             // Do something with text
-                            Log.e("MyTag","Nut is " + temp);
+                            Log.e("MyTag", "Nut is " + temp);
                             widget.setNut(temp);
-                        }
-                        else
+                        } else
                             // Check which Tag we have
-                            if (xpp.getName().equalsIgnoreCase("Washer"))
-                            {
+                            if (xpp.getName().equalsIgnoreCase("Washer")) {
                                 // Now just get the associated text
                                 String temp = xpp.nextText();
                                 // Do something with text
-                                Log.e("MyTag","Washer is " + temp);
+                                Log.e("MyTag", "Washer is " + temp);
                                 widget.setWasher(temp);
                             }
-                }
-                else
-                if(eventType == XmlPullParser.END_TAG)
-                {
-                    if (xpp.getName().equalsIgnoreCase("widget"))
-                    {
-                        Log.e("MyTag","widget is " + widget.toString());
+                } else if (eventType == XmlPullParser.END_TAG) {
+                    if (xpp.getName().equalsIgnoreCase("widget")) {
+                        Log.e("MyTag", "widget is " + widget.toString());
                         alist.add(widget);
-                    }
-                    else
-                    if (xpp.getName().equalsIgnoreCase("widgetcollection"))
-                    {
+                    } else if (xpp.getName().equalsIgnoreCase("widgetcollection")) {
                         int size;
                         size = alist.size();
-                        Log.e("MyTag","widgetcollection size is " + size);
+                        Log.e("MyTag", "widgetcollection size is " + size);
                     }
                 }
 
@@ -139,17 +115,13 @@ public class MainActivity extends AppCompatActivity {
             } // End of while
 
 
-        }
-        catch (XmlPullParserException ae1)
-        {
-            Log.e("MyTag","Parsing error" + ae1.toString());
-        }
-        catch (IOException ae1)
-        {
-            Log.e("MyTag","IO error during parsing");
+        } catch (XmlPullParserException ae1) {
+            Log.e("MyTag", "Parsing error" + ae1.toString());
+        } catch (IOException ae1) {
+            Log.e("MyTag", "IO error during parsing");
         }
 
-        Log.e("MyTag","End document");
+        Log.e("MyTag", "End document");
 
         return alist;
 
