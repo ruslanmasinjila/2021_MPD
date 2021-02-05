@@ -21,14 +21,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         exitButton = findViewById(R.id.exitButton);
-        nameEntry =  findViewById(R.id.nameEntry);
-        toChange =  findViewById(R.id.toChange);
+        nameEntry = findViewById(R.id.nameEntry);
+        toChange = findViewById(R.id.toChange);
 
     }
 
 
-    public void changeColor(View exitButton)
-    {
+    public void changeColor(View exitButton) {
         String name = nameEntry.getText().toString();
         toChange.setText(name);
         toChange.setTextColor(Color.RED);
