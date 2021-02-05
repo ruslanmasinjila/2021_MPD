@@ -19,10 +19,6 @@ public class MainActivity extends AppCompatActivity {
     Button clearResults;
 
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,20 +27,19 @@ public class MainActivity extends AppCompatActivity {
         editTextLENGTH = findViewById(R.id.editTextLENGTH);
         editTextHEIGHT = findViewById(R.id.editTextHEIGHT);
         calculateArea = findViewById(R.id.calculateArea);
-        textViewRESULT= findViewById(R.id.textViewRESULT);
+        textViewRESULT = findViewById(R.id.textViewRESULT);
         clearResults = findViewById(R.id.clearResults);
 
     }
 
-    public void calculateArea (View v)
-    {
+    public void calculateArea(View v) {
         double LENGTH = 0.0;
         double HEIGHT = 0.0;
 
         LENGTH = Double.parseDouble(editTextLENGTH.getText().toString());
         HEIGHT = Double.parseDouble(editTextHEIGHT.getText().toString());
 
-        double AREA = LENGTH*HEIGHT;
+        double AREA = LENGTH * HEIGHT;
 
         textViewRESULT.setText(String.valueOf(AREA));
 
@@ -53,18 +48,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    void closeKeyBoard()
-    {
+    void closeKeyBoard() {
         View view = this.getCurrentFocus();
-        if (view != null)
-        {
-            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(view.getWindowToken(),0);
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
-
-
-
 
 
 }
