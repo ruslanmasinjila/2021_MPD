@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:orientation="vertical" >
+    android:paddingRight="16dp">
 
 
     <LinearLayout
@@ -15,8 +15,8 @@
             android:id="@+id/textViewHEADER"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Calculate Area of the Rectangle"
             android:gravity="center"
+            android:text="Calculate Area of the Rectangle"
             android:textSize="24sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -34,14 +34,12 @@
 
             <TextView
                 android:id="@+id/textViewLENGTH_LABEL"
-                android:text="LENGTH (cm):"
                 style="@style/textViewLABEL"
-                 />
+                android:text="LENGTH (cm):" />
 
             <EditText
                 android:id="@+id/editTextLENGTH"
-                style="@style/editTextINPUT"
-                />
+                style="@style/editTextINPUT" />
         </LinearLayout>
 
         <LinearLayout
@@ -53,14 +51,12 @@
 
             <TextView
                 android:id="@+id/textViewHEIGHT_LABEL"
-                android:text="HEIGHT (cm):"
                 style="@style/textViewLABEL"
-                 />
+                android:text="HEIGHT (cm):" />
 
             <EditText
                 android:id="@+id/editTextHEIGHT"
-                style="@style/editTextINPUT"
-                />
+                style="@style/editTextINPUT" />
         </LinearLayout>
     </LinearLayout>
 
@@ -68,12 +64,12 @@
         style="@style/LinearLayout"
         android:orientation="vertical">
 
-        <Button
+        <android.widget.Button
             android:id="@+id/calculateArea"
             style="@style/button"
-            android:text="CALCULATE AREA"
+            android:background="@drawable/rounded_button_green"
             android:onClick="calculateArea"
-             />
+            android:text="CALCULATE AREA" />
     </LinearLayout>
 
     <LinearLayout
@@ -82,17 +78,16 @@
 
         <TextView
             android:id="@+id/textViewAREA_LABEL"
-            android:text="AREA(cm²):"
             style="@style/textViewLABEL"
-             />
+            android:text="AREA(cm²):" />
 
         <TextView
             android:id="@+id/textViewRESULT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:ems="5"
             android:gravity="center"
             android:text=""
-            android:ems="5"
             android:textSize="24sp" />
 
 
@@ -102,10 +97,10 @@
         style="@style/LinearLayout"
         android:orientation="vertical">
 
-        <Button
+        <android.widget.Button
             android:id="@+id/clearResults"
             style="@style/button"
-            android:text="CLEAR RESULTS"
-             />
+            android:background="@drawable/rounded_button_red"
+            android:text="CLEAR RESULTS" />
     </LinearLayout>
 </LinearLayout>
