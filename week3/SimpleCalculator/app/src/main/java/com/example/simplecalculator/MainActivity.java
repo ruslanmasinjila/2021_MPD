@@ -49,12 +49,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void clearResults(View v)
     {
-        editTextLENGTH.getText().clear();
-        editTextHEIGHT.getText().clear();
+        editTextLENGTH.setText("");
+        editTextHEIGHT.setText("");
         textViewRESULT.setText("");
 
 
+
+
     }
+
 
     void closeKeyBoard() {
         View view = this.getCurrentFocus();
