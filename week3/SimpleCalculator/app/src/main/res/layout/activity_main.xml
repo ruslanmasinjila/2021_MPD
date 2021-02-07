@@ -92,6 +92,7 @@
             android:layout_height="wrap_content"
             android:onClick="calculateArea"
             android:text="CALCULATE AREA"
+            android:backgroundTint="@color/Green"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -134,6 +135,7 @@
             android:layout_height="wrap_content"
             android:text="CLEAR RESULTS"
             android:onClick="clearResults"
+            android:backgroundTint="@color/Red"
             android:textSize="30sp" />
     </LinearLayout>
 </LinearLayout>
