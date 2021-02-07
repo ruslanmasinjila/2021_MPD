@@ -117,6 +117,7 @@
             android:ems="5"
             android:gravity="center"
             android:text=""
+            android:background="@drawable/border"
             android:textSize="24sp" />
     </LinearLayout>
 
