@@ -91,6 +91,7 @@
             android:id="@+id/clearResults"
             style="@style/button"
             android:background="@drawable/rounded_button_red"
+            android:onClick="clearResults"
             android:text="CLEAR RESULTS" />
     </LinearLayout>
 </LinearLayout>
