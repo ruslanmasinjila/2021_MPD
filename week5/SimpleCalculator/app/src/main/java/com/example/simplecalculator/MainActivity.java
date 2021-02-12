@@ -54,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void clearResults(View view) {
+    public void clearResults(View view)
+    {
         asyncClearResults(view);
     }
 
