@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ListView
+        android:id="@+id/ListView_LIST"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2"
+        android:paddingBottom="5dp">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/TextView_TEXTVIEW"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9"
+        android:text=""
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/Button_REFRESH"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1.7"
+        android:onClick="Refresh"
+        android:text="REFRESH" />
+
+</LinearLayout>

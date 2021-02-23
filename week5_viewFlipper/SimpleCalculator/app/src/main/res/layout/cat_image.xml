@@ -22,7 +22,7 @@
     <LinearLayout
         style="@style/LinearHorizontalLayout"
         android:orientation="vertical"
-        android:layout_weight="0.425">
+        android:layout_weight="0.420">
 
 
     </LinearLayout>
