@@ -43,10 +43,10 @@ public class RSSParser
                         titleList     = new LinkedList<String>();
 
 
-                        eventType=xpp.next();
-                        while(!xpp.getName().equalsIgnoreCase("item"))
+                        for(int i = 0; i<24; i++)
                         {
-                            eventType=xpp.next();
+                            eventType = xpp.next();
+                            
                         }
 
                     }
