@@ -12,6 +12,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     Button calculateArea;
     TextView textViewRESULT;
     Button clearResults;
+    ViewFlipper viewFlipper;
 
 
     @Override
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         calculateArea = findViewById(R.id.calculateArea);
         textViewRESULT = findViewById(R.id.textViewRESULT);
         clearResults = findViewById(R.id.clearResults);
+        viewFlipper = findViewById(R.id.viewFlipper);
 
     }
 
@@ -127,6 +130,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
+    public void goToPrevious(View view)
+    {
+        viewFlipper.showPrevious();
+    }
+
+    public void goToNext(View view)
+    {
+        viewFlipper.showNext();
+    }
+
+
 
 
 }
