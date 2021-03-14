@@ -1,5 +1,6 @@
 package com.example.simplecalculator;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -65,5 +66,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
 
+        outState.putDouble("editTextLENGTH", Double.parseDouble(editTextLENGTH.getText().toString()));
+        outState.putDouble("editTextHEIGHT", Double.parseDouble(editTextHEIGHT.getText().toString()));
+        outState.putDouble("textViewRESULT", Double.parseDouble(textViewRESULT.getText().toString()));
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        editTextLENGTH.setText(Double.toString(savedInstanceState.getDouble("editTextLENGTH")));
+        editTextHEIGHT.setText(Double.toString(savedInstanceState.getDouble("editTextHEIGHT")));
+        textViewRESULT.setText(Double.toString(savedInstanceState.getDouble("textViewRESULT")));
+
+
+    }
 }
