@@ -1,4 +1,4 @@
-package com.fraeds.fragmentcommunication;
+package com.example.fragmentcommunication;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.fraeds.fragmentcommunication;
+package com.example.fragmentcommunication;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,6 @@ import android.widget.ListView;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import java.util.LinkedList;
@@ -43,7 +42,7 @@ public class FragmentA extends Fragment {
 
         ////////////////////////////////////////////////////////////////////////////////////////////////
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_a, container, false);
+        View view = inflater.inflate(R.layout.layout_a, container, false);
 
         // Find ListView_NAMES its by ID in the root
         ListView_NAMES = (ListView)view.findViewById(R.id.ListView_NAMES);

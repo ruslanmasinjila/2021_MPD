@@ -1,4 +1,4 @@
-package com.fraeds.fragmentcommunication;
+package com.example.fragmentcommunication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
         LayoutInflater inflater = (LayoutInflater)getSystemService(this.LAYOUT_INFLATER_SERVICE);
         layout_ab = (LinearLayout) inflater.inflate(R.layout.layout_ab, null);
 
+        // Add the newly inflated layout_ab into the FrameLayout_CONTAINER
+        FrameLayout_CONTAINER.addView(layout_ab);
+
 
         // 3. Remember that layout_ab is a LinearLayout which inturn contains two FrameLayouts
         //    One of the FrameLayouts (fragment_a) will contain the FragmentA
@@ -66,8 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        // Add the newly inflated layout_ab into the FrameLayout_CONTAINER
-        FrameLayout_CONTAINER.addView(layout_ab);
+
 
 
     }

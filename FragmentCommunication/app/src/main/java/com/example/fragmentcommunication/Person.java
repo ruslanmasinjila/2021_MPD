@@ -1,4 +1,4 @@
-package com.fraeds.fragmentcommunication;
+package com.example.fragmentcommunication;
 
 public class Person {
 
